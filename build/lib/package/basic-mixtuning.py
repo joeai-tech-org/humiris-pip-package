@@ -5,19 +5,19 @@ class MessageType:
         self.role = role
         self.content = content
 
-class UseMixtuningPayload:
-    def __init__(self, mix_tuning_id: str, messages: list, temperature: float, max_tokens: int):
-        self.mix_tuning_id = mix_tuning_id
+class BasicPayload:
+    def __init__(self, advanced_mix_tuning_id: str, messages: list, temperature: float, max_tokens: int):
+        self.advanced_mix_tuning_id = advanced_mix_tuning_id
         self.messages = messages
         self.temperature = temperature
         self.max_tokens = max_tokens
 
-class MoAi:
+class BasicMoAi:
     def __init__(self, api_key: str):
         self.api_url = 'https://moai-service-app.humiris.ai/api/api-key-operators/use-basic-mixtuning'
         self.api_key = api_key
 
-    def use_basic_mixtuning(self, payload: UseMixtuningPayload):
+    def use_basic_mixtuning(self, payload: BasicPayload):
         headers = {
             'moai-api-key': self.api_key,
             'Content-Type': 'application/json'
