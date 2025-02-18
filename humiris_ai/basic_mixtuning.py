@@ -32,7 +32,7 @@ class BasicMoAi:
         }
 
         try:
-            response = requests.post(self.api_url, json=vars(payload_dict), headers=headers)
+            response = requests.post(self.api_url, json=payload_dict, headers=headers)
             response.raise_for_status()
             return response.json()
         except requests.exceptions.RequestException as error:
