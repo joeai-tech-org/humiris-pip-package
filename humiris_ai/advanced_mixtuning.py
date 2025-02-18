@@ -6,8 +6,8 @@ class MessageType:
         self.content = content
 
 class AdvancedPayload:
-    def __init__(self, mix_tuning_id: str, messages: list, temperature: float, max_tokens: int):
-        self.mix_tuning_id = mix_tuning_id
+    def __init__(self, advanced_mix_tuning_id: str, messages: list, temperature: float, max_tokens: int):
+        self.advanced_mix_tuning_id = advanced_mix_tuning_id
         self.messages = messages
         self.temperature = temperature
         self.max_tokens = max_tokens

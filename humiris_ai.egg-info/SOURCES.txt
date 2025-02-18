@@ -3,8 +3,8 @@ MANIFEST.in
 README.md
 setup.py
 humiris_ai/__init__.py
-humiris_ai/advanced-mixtuning.py
-humiris_ai/basic-mixtuning.py
+humiris_ai/advanced_mixtuning.py
+humiris_ai/basic_mixtuning.py
 humiris_ai.egg-info/PKG-INFO
 humiris_ai.egg-info/SOURCES.txt
 humiris_ai.egg-info/dependency_links.txt
