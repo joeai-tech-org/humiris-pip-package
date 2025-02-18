@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 
 setup(
-    name='humiris',
+    name='humiris_ai',
     version='1.0.4',
     author='Hilario Houmey',
     author_email='h.hilario@humiris.ai',
