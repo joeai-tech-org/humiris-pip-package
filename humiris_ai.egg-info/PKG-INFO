@@ -1,6 +1,6 @@
-Metadata-Version: 2.1
+Metadata-Version: 2.2
 Name: humiris-ai
-Version: 1.0.1
+Version: 1.0.3
 Summary: Humiris AI is a library that allows developers to seamlessly integrate Mixture of AI Basic and Advanced into their applications.
 Home-page: https://github.com/joeai-tech-org/humiris-pip-package
 Author: Hilario Houmey
@@ -11,6 +11,14 @@ Classifier: Operating System :: OS Independent
 Requires-Python: >=3.6
 Description-Content-Type: text/markdown
 License-File: LICENSE
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: requires-python
+Dynamic: summary
 
 # Humiris Installation and Usage Guide
 

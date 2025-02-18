@@ -12,7 +12,7 @@ You can install Humiris using pip:
 
 ```bash
 # Using pip
-pip install humiris-ai
+pip install humiris
 ```
 
 # Usage
