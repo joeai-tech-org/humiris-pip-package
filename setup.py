@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='humiris_ai',
-    version='1.0.9',
+    version='1.0.10',
     author='Hilario Houmey',
     author_email='h.hilario@humiris.ai',
     description='Humiris AI is a library that allows developers to seamlessly integrate Mixture of AI Basic and Advanced into their applications.',
@@ -18,5 +18,8 @@ setup(
     python_requires='>=3.6',
     install_requires=[
         # list your package dependencies here
+    "requests>=2.20.0",
+    "setuptools>=40.0.0",
+    "pydantic>=2.20.1"
     ],
 )
