@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='humiris_ai',
-    version='1.0.8',
+    version='1.0.9',
     author='Hilario Houmey',
     author_email='h.hilario@humiris.ai',
     description='Humiris AI is a library that allows developers to seamlessly integrate Mixture of AI Basic and Advanced into their applications.',

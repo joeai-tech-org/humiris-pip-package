@@ -1,9 +1,17 @@
+from typing import Literal
+from pydantic import BaseModel
 import requests
 
-class MessageType:
-    def __init__(self, role: str, content: str):
-        self.role = role
-        self.content = content
+Role = Literal['user', 'assistant', 'system']
+
+class MessageType(BaseModel):
+    role: Role
+    content: str
+
+# class MessageType:
+#     def __init__(self, role: str, content: str):
+#         self.role = role
+#         self.content = content
 
 class BasicPayload:
     def __init__(self, mix_tuning_id: str, messages: list, temperature: float, max_tokens: int):
@@ -24,15 +32,10 @@ class BasicMoAi:
         }
 
          # Convert payload and MessageType objects to dictionaries
-        payload_dict = {
-            "mix_tuning_id": payload.mix_tuning_id,
-            "messages": [{"role": msg.role, "content": msg.content} for msg in payload.messages],
-            "temperature": payload.temperature,
-            "max_tokens": payload.max_tokens
-        }
+        payload.messages = [message.dict() for message in payload.messages]
 
         try:
-            response = requests.post(self.api_url, json=payload_dict, headers=headers)
+            response = requests.post(self.api_url, json=vars(payload), headers=headers)
             response.raise_for_status()
             return response.json()
         except requests.exceptions.RequestException as error:
